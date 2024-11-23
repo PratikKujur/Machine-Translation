@@ -18,3 +18,12 @@ oov_token="<unk>"
 start_token="<sos> "
 end_token=" <eos>"
 post_padding="post"
+
+# step 3-get model
+
+embedding_dim = 128
+hidden_units = 256
+
+# step 4-model trainer
+batch_size=64
+epochs=1
