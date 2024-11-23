@@ -27,3 +27,6 @@ hidden_units = 256
 # step 4-model trainer
 batch_size=64
 epochs=1
+
+# step 4-model prediction
+text="how are you"
