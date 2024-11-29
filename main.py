@@ -16,7 +16,7 @@ print(train_data.shape,test_data.shape,val_data.shape)
 
 eng_tokenizer=Tp.start_text_preprocessing(task='tokenization',data=train_data,lang_key=source,num_word=None)
 hin_tokenizer=Tp.start_text_preprocessing(task='tokenization',data=train_data,lang_key=target,num_word=None)
-"""
+
 #step 2.2-
 en_train, dec_train_input, dec_train_target = Tp.start_text_preprocessing(task='special_tokens',
                                                                           data=train_data,
@@ -74,7 +74,7 @@ print(model.summary())
 model_history=Tp.model_trianing(model,en_train, dec_train_input,dec_train_target,en_val, dec_val_input,dec_val_target)
 print(model_history)
 #step-5-model evaluation
-"""
+
 #step-model prediction
 best_model=tf.keras.models.load_model('artifacts/machineTranslation_1.h5')
 Pt=Predict_text(input_text=text,model=best_model, en_tokenizer=eng_tokenizer, hi_tokenizer=hin_tokenizer, max_seq_len=max_seq_len)
